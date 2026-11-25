@@ -1,0 +1,28 @@
+[project]
+name = "llm-redo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Robert Slater", email = "rdslater@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "jupyter>=1.1.1",
+    "matplotlib>=3.11.2",
+    "pandas>=3.1.1",
+    "pip>=26.3",
+    "scikit-learn>=1.9.1",
+    "sentence-transformers>=6.3.0",
+    "setuptools<81",
+    "tensorflow[and-cuda]>=2.21.0",
+    "torch>=2.15.0",
+    "transformers>=5.24.0",
+]
+
+[project.scripts]
+llm-redo = "llm_redo:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"
