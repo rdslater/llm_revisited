@@ -42,3 +42,9 @@ It is best to have separate environments for TensorFlow and PyTorch, since their
 What I ran with (not requirements): WSL2, NVIDIA driver 610.57.01, CUDA UMD version 13.3, RTX 2070 (8 GB).
 
 If TensorFlow prints "Cannot dlopen some GPU libraries": add the venv's nvidia/*/lib folders to LD_LIBRARY_PATH. For Jupyter, set it in the kernel's kernel.json.
+
+## Results
+![Alt text describing the image](https://github.com/rdslater/llm_revisited/blob/master/newsgroup_accuracy_models.png)
+Looks bad for our poor friend the RNN/GRU but accuracy is a single number.  If you look at the confusion matrix, it did much better on the "confusing" categories.  In addition it was a very basic RNN - no bi-direction, sort of a hack tokenization. Its top 3 metric did approach 80 so its not as bad as it seems.  These categories have a LOT of overlap (check out the confusion matrices in the notebook). The is my PERSONAL opinion.  I actually tried to improve it with limited success (larger word vectors, better tokenization).  It could be NO FREE LUNCH, it could be I am just out of practice for RNNs.  Regardless this was a demo of how NLP evolved.
+
+
